@@ -23,6 +23,7 @@ This is project made when taking the coarse "Knowledge Representation and Reason
 
 - [X] Write down the requirements.
 - [ ] Write a pitch (pdf file).
+- [ ] Based on requirements add new tasks.
 
 ## Resources
 
