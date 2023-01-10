@@ -1,6 +1,6 @@
-# drinko
+# icy
 
-Ontology about drinks developed with Protégé.
+Ontology about ice cream types developed with Protégé.
 
 This is project made when taking the coarse "Knowledge Representation and Reasoning" in FMI as part of my Masters Degree.
 
