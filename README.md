@@ -11,9 +11,10 @@ This is project made when taking the coarse "Knowledge Representation and Reason
   - [ ] Composed concepts (by EXISTS, FILLS, ALL, AND).
 - [ ] At least 15 individuals (instances).
 - [ ] At least 10 properties with suitable domain and range.
-  - [ ] Functional;
-  - [ ] Transitive;
-  - [ ] Inverse.
+  - [X] Functional;
+  - [X] Transitive;
+  - [X] Inverse.
+  - [ ] Make them 10.
 - [ ] Examples of reasoning over the knowledge base:
   - [ ] KB |= (c → e)  - at least 1;
   - [ ] KB |= (c ⊑ d) - at least 1;
