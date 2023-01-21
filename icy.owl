@@ -153,7 +153,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
     </owl:Class>
     
 
@@ -233,7 +232,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
     </owl:Class>
     
 
@@ -295,6 +293,7 @@
                             <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Greece"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#India"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Indonesia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Iran"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Italy"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#New_Zeland"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Philippines"/>
@@ -307,7 +306,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#DomainThing"/>
     </owl:Class>
     
 
@@ -323,6 +321,7 @@
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#DomainThing -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#DomainThing">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition"/>
     </owl:Class>
     
@@ -887,7 +886,9 @@
 
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
