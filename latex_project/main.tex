@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{commath}
+% \usepackage{sidecap} % side captions
+% \usepackage[top=1.3in, bottom=1.5in, left=1.3in, right=1.3in]{geometry}
+
+% have nicer-looking links
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = red, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = blue
+}
+\usepackage[all]{hypcap}
+
+% turn off sections numbers
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+
+\newcommand{\JMUTitle}[9]{
+
+  \thispagestyle{empty}
+  \vspace*{\stretch{1}}
+  {\parindent0cm
+  \rule{\linewidth}{.7ex}}
+  \begin{flushright}
+    \vspace*{\stretch{1}}
+    \sffamily\bfseries\Huge
+    #1\\
+    \vspace*{\stretch{1}}
+    \sffamily\bfseries\large
+    #2\\
+    \vspace*{\stretch{1}}
+    \sffamily\bfseries\small
+    #3
+  \end{flushright}
+  \rule{\linewidth}{.7ex}
+
+  \vspace*{\stretch{1}}
+  \begin{center}
+    \includegraphics[width=3in]{./images/logo.png} \\
+    \vspace*{\stretch{1}}
+    \Large Курсов проект по \\ \textit{Представяне и моделиране на знания} \\
+
+    \vspace*{\stretch{2}}
+    \large Факултет по математика и информатика\\
+    \large Софийски университет\\
+    
+    \vspace*{\stretch{1}}
+    \large Проверил:  #8 \\[1mm]
+    
+    \vspace*{\stretch{1}}
+    \large #7 \\
+
+  \end{center}
+}
+
+
+
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
+
+
+
+\begin{document}  
+
+  \JMUTitle
+      {Icy: Онтология за Сладоледи}
+      {Симеон Христов}
+      {6MI3400191}
+      
+      {Wirtschaftswissenschaftlichen Fakultät}  % Name der Fakultaet
+      {W"urzburg 2018}                          % Ort und Jahr der Erstellung
+      {Януари 2023}                              % Tag der Abgabe
+      {ас. Мелания Бербатова}               % Name des Erstgutachters
+      {Zweitgutachter}                          % Name des Zweitgutachters
+
+  \clearpage
+
+\tableofcontents
+
+\clearpage
+
+
+
+
+\section{Цел} 
+
+TODO
+
+
+
+
+
+\section{Eлементи на онтологията}
+
+\subsection{Класове}
+
+\subsection{Свойства}
+
+\subsubsection{Свойства на обектите}
+
+TODO
+
+\subsubsection{Свойства на данните}
+
+TODO
+
+
+
+
+\subsection{Индивиди}
+
+
+
+
+
+
+\section{Примери за извършване на логически извод}
+
+
+
+
+
+
+
+
+\section{Извършване на класификация}
+
+
+
+
+
+
+\section{Заявки към базата от знание}
+
+\subsection{DL заявки}
+
+TODO
+
+\subsection{SPARQL заявки}
+
+TODO
+
+
+
+
+
+
+
+\section{Схема на онтологията}
+
+TODO
+
+
+
+\section{Бъдещо развитие}
+
+TODO
+
+
+
+
+\section{Използвани технологии}
+
+TODO
+
+
+
+
+
+%%%%%%%%%%%%%%%%% END OF MAIN TEXT %%%%%%%%%%%%%%%%
+
+
+\listoffigures
+
+\section{Източници}
+
+TODO
+
+
+\end{document}
