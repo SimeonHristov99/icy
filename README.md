@@ -29,6 +29,13 @@ This is project made when taking the coarse "Knowledge Representation and Reason
 
 ## Resources
 
+### Main
+
+- [Wikipedia Article on Ice Cream](https://en.wikipedia.org/wiki/Ice_cream)
+- [Matthew Horridge. A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools Edition 1.3 (I refer to this as "book" in the additional resources)](https://www.researchgate.net/publication/272829948_A_Practical_Guide_To_Building_OWL_Ontologies_Using_Protege_4_and_CO-ODE_Tools_Edition_13)
+
+### Additional
+
 - [Step by step creation of ontology](https://www.youtube.com/watch?v=NnzAyFTCdyE)
 - [Exercises from book (part 1)](https://www.youtube.com/watch?v=1wVeD2PutOA)
 - [Exercises from book (part 2)](https://www.youtube.com/watch?v=mb_A3HTkk18)
