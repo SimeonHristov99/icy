@@ -1,0 +1,1139 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fmi_krr/ontologies/icy"
+     xml:base="http://www.semanticweb.org/fmi_krr/ontologies/icy"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy">
+        <rdfs:comment xml:lang="en">This is an ontology about the various types of ice cream.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isBaseOf"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasIngredient">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isIngredientOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sweetness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isToppingOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#isBaseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#isBaseOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#isIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#isIngredientOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#isToppingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#isToppingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Apple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Apple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Argentinian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Argentinian">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Egg"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NaturalToppings"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Argentina"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Avocado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Avocado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Banana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Banana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#BlackSesame -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#BlackSesame">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#HerbSpiceTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#None"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Chinese -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Chinese">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#PopularIceCream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#BlackSesame"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#RedBean"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#China"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Chocolate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Chocolate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#LiquidTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#High"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#CoconutMilk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#CoconutMilk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#LiquidTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Coffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Coffee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#None"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#DomainThing"/>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Argentina"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Australia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#China"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Greece"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#India"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Indonesia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Italy"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#New_Zeland"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Philippines"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Spain"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Turkey"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#United_Kingdom"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#United_States"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#DomainThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#DomainThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#DomainThing">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Durian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Durian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Egg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Egg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Food">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#DomainThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Gelato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Gelato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mango"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Italy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#HardToppings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#HardToppings">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#HerbSpiceTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#NutTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Helado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Helado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Egg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mango"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Argentina"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#HerbSpiceTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#HerbSpiceTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sweetness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Italian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Italian">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Egg"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NaturalToppings"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Italy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Jackfruit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Jackfruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Lemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Lemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#LiquidTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#LiquidTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sweetness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Mango -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mango">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Mastic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mastic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#None"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sweetness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Mochi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mochi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#BlackSesame"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Vanilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#China"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#MungBean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#MungBean">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#None"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#NaturalToppings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#NaturalToppings">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#LiquidTopping"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#NonSweetToppings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#NonSweetToppings">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#SweetToppings"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#None -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#None">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sweetness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Noodle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Noodle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#NutTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#NutTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#PalmSugar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#PalmSugar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#LiquidTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#High"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#PandanusLeaves -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#PandanusLeaves">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#HerbSpiceTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#None"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Pistachios -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Pistachios">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NutTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#None"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#PopularIceCream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#PopularIceCream">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Chocolate"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Coffee"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mango"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Strawberry"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Vanilla"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#RedBean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#RedBean">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#None"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#RoseWater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#RoseWater">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#LiquidTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Salep -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Salep">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Strawberry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Strawberry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#SugarSyrup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#SugarSyrup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#LiquidTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#High"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#SweetToppings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#SweetToppings">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#High"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Sweetness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sweetness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#High"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Low"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#None"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Vanilla -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Vanilla">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#HerbSpiceTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Low"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Water -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Water">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Argentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Argentina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Australia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Australia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Greece -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Greece">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#India -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#India">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Indonesia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Indonesia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Iran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Iran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#New_Zeland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#New_Zeland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Philippines -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Philippines">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Spain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Spain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Turkey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Turkey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#United_Kingdom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#United_Kingdom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#United_States -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#United_States">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Apple"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Avocado"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Banana"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Durian"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Jackfruit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Lemon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mango"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Strawberry"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#HerbSpiceTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#LiquidTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#NutTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#BlackSesame"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#PandanusLeaves"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Vanilla"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Chocolate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#CoconutMilk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#PalmSugar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#RoseWater"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#SugarSyrup"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Coffee"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mastic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#MungBean"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#RedBean"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Egg"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Noodle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Salep"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Water"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#None"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
