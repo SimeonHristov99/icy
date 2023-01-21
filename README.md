@@ -2,7 +2,7 @@
 
 Ontology about ice cream types developed with Protégé.
 
-This is project made when taking the coarse "Knowledge Representation and Reasoning" in FMI as part of my Masters Degree.
+This project was made when taking the coarse "Knowledge Representation and Reasoning" at FMI as part of my Masters degree.
 
 ## Requirements
 
