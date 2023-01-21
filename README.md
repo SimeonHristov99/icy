@@ -25,7 +25,7 @@ This is project made when taking the coarse "Knowledge Representation and Reason
 - [X] Write down the requirements.
 - [X] Write a pitch (pdf file).
 - [X] Add first version of documentation.
-- [ ] Based on requirements add new tasks.
+- [ ] Document current ontology.
 
 ## Resources
 
