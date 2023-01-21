@@ -25,7 +25,7 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] Write down the requirements.
 - [X] Write a pitch (pdf file).
 - [X] Add first version of documentation.
-- [ ] Document current ontology.
+- [ ] Add table with classes.
 
 ## Resources
 

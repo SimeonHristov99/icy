@@ -7,6 +7,9 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{commath}
+\usepackage{float}
+\usepackage{booktabs}   
+\usepackage{ltablex}
 % \usepackage{sidecap} % side captions
 % \usepackage[top=1.3in, bottom=1.5in, left=1.3in, right=1.3in]{geometry}
 
@@ -58,7 +61,7 @@
     \large Софийски университет\\
     
     \vspace*{\stretch{1}}
-    \large Проверил:  #8 \\[1mm]
+    \large Изпитващ:  #8 \\[1mm]
     
     \vspace*{\stretch{1}}
     \large #7 \\
@@ -66,7 +69,7 @@
   \end{center}
 }
 
-
+\newcommand*{\MyIndent}{\hspace*{7em}}
 
 %%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
 
@@ -92,45 +95,118 @@
 \clearpage
 
 
-
-
 \section{Цел} 
 
-Онтологията icy представя различните концепции и обекти в областта на сладоледите - видове, вкусове и съставки. Тя може да се прилага в различни контексти, включително създаване на
-функции за търсене на сладоледи в уеб сайт, или мобилно приложение, свързано със
-сладоледи, както и разработване на препоръчващи системи.
-
-\vspace{1em}
-
-Йерархията е организирана в два аспекта - на класове, които представляват реални обекти (т.нар. \textit{DomainPartition}) и класове, които представляват нива на сладост (т.нар. \textit{ValuePartition}). По същество това е имплементация на широко използван шаблон за проектиране на онтологии (\textit{design patten}) дискутиран в [2].
-
-
+    Онтологията icy представя различните концепции и обекти в областта на сладоледите - видове, вкусове и съставки. Тя може да се прилага в различни контексти, включително създаване на
+    функции за търсене на сладоледи в уеб сайт, или мобилно приложение, свързано със
+    сладоледи, както и разработване на препоръчващи системи.
+    
+    \vspace{1em}
+    
+    Йерархията е организирана в два аспекта - на концепти, които представляват реални обекти (т.нар. \textit{DomainPartition}) и концепти, които представляват нива на сладост (т.нар. \textit{ValuePartition}). По същество това е имплементация на широко използван шаблон за проектиране на онтологии (\textit{design patten}) дискутиран в [2].
 
 
+\section{Елементи на онтологията}
 
-\section{Eлементи на онтологията}
+    \subsection{Концепти}
+        
+        Следващата таблица показва различните концепти в icy, използвайки синтаксиса на \textit{DL}.
 
-\subsection{Класове}
+        Symbols: $\doteq$, $\leq$, $\sqsubseteq$
 
-\subsection{Свойства}
+        \begin{tabularx}{1\textwidth}{@{}X@{}}
+        \toprule
+        \textbf{Концепти} \\
+        \midrule
+        \endhead
 
-\subsubsection{Свойства на обектите}
+        \textbf{DomainThing} $\sqsubseteq$ Thing \\ \tabularnewline
+        
+            \textbf{Country} $\doteq$ [AND DomainThing \\
+            \MyIndent \{\{Argentina\} $\cup$ (Argentina, Australia, China, Greece, India, Indonesia, Italy, New\_Zeland, Philippines, Spain, Turkey, United\_Kingdom, United\_States, Iran)] 
+                      \\ \tabularnewline
+        	\textbf{Food} \\
+        		IceCream \\
+        			Argentinian \\
+        			Chinese \\
+        			Italian \\
+        			NamedIceCream \\
+        				Gelato \\
+        				Helado \\
+        				Mochi \\
+        			PopularIceCream \\
+        				Chinese \\
+        		IceCreamBase \\
+        			Cream \\
+        			Egg \\
+        			Noodle \\
+        			Salep \\
+        			Sugar \\
+        			Water \\
+        			WholeMilk \\
+        		IceCreamTopping \\
+        			BeanTopping \\
+        				Coffee \\
+        				Mastic \\
+        				MungBean \\
+        				RedBean \\
+        			FruitTopping \\
+        				Apple \\
+        				Avocado \\
+        				Banana \\
+        				Durian \\
+        				Jackfruit \\
+        				Lemon \\
+        				Mango \\
+        				Strawberry \\
+        			HardToppings \\
+        			HerbSpiceTopping \\
+        				BlackSesame \\
+        				PandanusLeaves \\
+        				Vanilla \\
+        			LiquidTopping \\
+        				Chocolate \\
+        				CoconutMilk \\
+        				PalmSugar \\
+        				RoseWater \\
+        				SugarSyrup \\
+        			NaturalToppings \\
+        			NonSweetToppings \\
+        			NutTopping \\
+        				Pistachios \\
+        			SweetToppings \\
+        ValuePartition \\
+        	Sweetness \\
+        		High \\
+        		Low \\
+        		Medium \\
+        		None \\
 
-TODO
-
-\subsubsection{Свойства на данните}
-
-TODO
+        
+        \bottomrule
+        \end{tabularx}
 
 
-
-
-\subsection{Индивиди}
-
-
-
-
-
+    
+    \subsection{Свойства}
+    
+    \subsubsection{Свойства на обектите}
+    
+    TODO
+    
+    \subsubsection{Свойства на данните}
+    
+    TODO
+    
+    
+    
+    
+    \subsection{Индивиди}
+    
+    
+    
+    
+    
 
 \section{Примери за извършване на логически извод}
 
