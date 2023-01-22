@@ -62,7 +62,7 @@
     \large Софийски университет\\
     
     \vspace*{\stretch{1}}
-    \large Изпитващ:  #8 \\[1mm]
+    \large Оценен от:  #8 \\[1mm]
     
     \vspace*{\stretch{1}}
     \large #7 \\
@@ -241,15 +241,15 @@
     Уточнения за горната таблица:
 
         \begin{itemize} 
-            \item{} [NOT $d_1$ $d_2$ \ldots $d_k$] описва тези индивиди, които не са представители на всички $d_i$
-            \item{} \textit{I}[[AND DomainThing ValuePartition]] = $\emptyset$
-            \item{} \textit{I}[[AND IceCream IceCreamTopping IceCreamBase]] = $\emptyset$
-            \item{} \textit{I}[[AND BeanTopping NutTopping FruitTopping LiquidTopping HerbSpiceTopping]] = $\emptyset$
-            \item{} \textit{I}[[AND Cream Egg Noodle WholeMilk Salep Sugar Water]] = $\emptyset$
-            \item{} \textit{I}[[AND Coffee RedBean Mastic MungBean]] = $\emptyset$
-            \item{} \textit{I}[[AND Avocado Lemon Durian Strawberry Mango Banana Jackfruit Apple]] = $\emptyset$
-            \item{} \textit{I}[[AND Vanilla BlackSesame PandanusLeaves]] = $\emptyset$
-            \item{} \textit{I}[[AND SugarSyrup CoconutMilk RoseWater Chocolate PalmSugar]] = $\emptyset$
+            \item{} [NOT $d_1$ $d_2$ \ldots $d_k$] описва тези индивиди, които не са представители на всички $d_i$;
+            \item{} \textit{I}[[AND DomainThing ValuePartition]] = $\emptyset$;
+            \item{} \textit{I}[[AND IceCream IceCreamTopping IceCreamBase]] = $\emptyset$;
+            \item{} \textit{I}[[AND BeanTopping NutTopping FruitTopping LiquidTopping HerbSpiceTopping]] = $\emptyset$;
+            \item{} \textit{I}[[AND Cream Egg Noodle WholeMilk Salep Sugar Water]] = $\emptyset$;
+            \item{} \textit{I}[[AND Coffee RedBean Mastic MungBean]] = $\emptyset$;
+            \item{} \textit{I}[[AND Avocado Lemon Durian Strawberry Mango Banana Jackfruit Apple]] = $\emptyset$;
+            \item{} \textit{I}[[AND Vanilla BlackSesame PandanusLeaves]] = $\emptyset$;
+            \item{} \textit{I}[[AND SugarSyrup CoconutMilk RoseWater Chocolate PalmSugar]] = $\emptyset$.
         \end{itemize}
     
     \subsection{Свойства}
@@ -278,7 +278,17 @@
     
         \subsubsection{Свойства на данните}
     
-            TODO
+            \begin{table}[htbp]
+                \centering
+                \begin{tabularx}{\textwidth}{| X | X | X | X |}
+                    \hline
+                    \textbf{Домейн}          & \textbf{Свойство}     & \textbf{Рейндж}     & \textbf{Характерис- тика}         \\ \hline
+                            
+                    IceCream            & hasCalorific ContentValue & xsd:integer         &       \textit{functional}          \\ \hline
+                    IceCream            & isTraditional & xsd:bool         &       \textit{functional}          \\ \hline
+                            
+                \end{tabularx}
+            \end{table}
     
     
     

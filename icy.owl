@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/fmi_krr/ontologies/icy"
      xml:base="http://www.semanticweb.org/fmi_krr/ontologies/icy"
+     xmlns:icy="http://www.semanticweb.org/fmi_krr/ontologies/icy#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -95,6 +96,33 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#isToppingOf">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isIngredientOf"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCalorificContentValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCalorificContentValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#isTraditional -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#isTraditional">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -454,6 +482,33 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#HighCalorieIceCream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#HighCalorieIceCream">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCalorificContentValue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream">
@@ -468,6 +523,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCalorificContentValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isTraditional"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -564,6 +631,71 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Low">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sweetness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#LowCalorieIceCream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#LowCalorieIceCream">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCalorificContentValue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Magnum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Magnum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Water"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Chocolate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#United_States"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -896,6 +1028,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#TraditionalIceCream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#TraditionalIceCream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isTraditional"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ValuePartition">
@@ -965,6 +1111,46 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#China">
         <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleGelato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleGelato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Gelato"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHelado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHelado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Helado"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">159</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleMagnum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleMagnum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Magnum"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleMochi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleMochi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mochi"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
     </owl:NamedIndividual>
     
 

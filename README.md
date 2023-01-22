@@ -9,11 +9,11 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] At least 15 concepts (classes):
   - [X] Atomic concepts;
   - [X] Composed concepts (by EXISTS, FILLS, ALL, AND).
-- [ ] At least 10 properties with suitable domain and range.
+- [X] At least 10 properties with suitable domain and range.
   - [X] Functional;
   - [X] Transitive;
   - [X] Inverse;
-  - [ ] Make them 10.
+  - [X] Make them 10.
 - [ ] At least 15 individuals (instances).
 - [ ] Examples of reasoning over the knowledge base:
   - [ ] KB |= (c → e)  - at least 1;
@@ -27,7 +27,8 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] Add first version of documentation.
 - [X] Add table with classes.
 - [X] Add table with object properties.
-- [ ] Add table with data properties.
+- [X] Add table with data properties.
+- [ ] Fix problem with `isTraditional` data property.
 
 ## Resources
 
