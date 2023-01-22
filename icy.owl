@@ -464,6 +464,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -514,7 +520,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
     </owl:Class>
     
 
@@ -857,7 +862,14 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamTopping"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#High"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#High"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>

@@ -10,6 +10,7 @@
 \usepackage{float}
 \usepackage{booktabs}   
 \usepackage{ltablex}
+
 % \usepackage{sidecap} % side captions
 % \usepackage[top=1.3in, bottom=1.5in, left=1.3in, right=1.3in]{geometry}
 
@@ -23,7 +24,7 @@
   linkcolor    = blue, %Colour of internal links
   citecolor   = blue
 }
-\usepackage[all]{hypcap}
+\usepackage[hypcap=true]{caption}
 
 % turn off sections numbers
 \makeatletter
@@ -133,96 +134,95 @@
 
             
             \textbf{IceCream} $\sqsubseteq$ [AND Food \\
-                                      \MyIndent [EXISTS 1 :hasBase] \\
-                                      \MyIndent [EXISTS 1 :hasTopping] \\
-                                      \MyIndent [ALL :hasBase IceCreamBase]] \\
+                                      \MyIndent [EXISTS 1 :HasBase] \\
+                                      \MyIndent [EXISTS 1 :HasTopping] \\
+                                      \MyIndent [ALL :HasBase IceCreamBase]] \\
                                       \tabularnewline
            
-            \textbf{Argentinian} $\doteq$ [AND IceCream [ALL :hasBase [ONE-OF Egg Sugar WholeMilk]] \\
-                                              \MyIndent [ALL :hasTopping NaturalToppings] \\
-                                              \MyIndent [FILLS :hasCountryOfOrigin Argentina]] \\
+            \textbf{Argentinian} $\doteq$ [AND IceCream [ALL :HasBase [ONE-OF Egg Sugar WholeMilk]] \\
+                                              \MyIndent [ALL :HasTopping NaturalToppings] \\
+                                              \MyIndent [FILLS :HasCountryOfOrigin Argentina]] \\
                                               \tabularnewline
            
-            \textbf{Italian} $\doteq$ [AND IceCream [ALL :hasBase [ONE-OF Egg Sugar WholeMilk]] \\
-                                          \MyIndent [ALL :hasTopping NaturalToppings] \\
-                                          \MyIndent [FILLS :hasCountryOfOrigin Italy]] \\
+            \textbf{Italian} $\doteq$ [AND IceCream [ALL :HasBase [ONE-OF Egg Sugar WholeMilk]] \\
+                                          \MyIndent [ALL :HasTopping NaturalToppings] \\
+                                          \MyIndent [FILLS :HasCountryOfOrigin Italy]] \\
                                           \tabularnewline
             
             \textbf{NamedIceCream} $\sqsubseteq$ IceCream \\ \tabularnewline
             
-            \textbf{Gelato} $\sqsubseteq$ [AND NamedIceCream [ALL :hasBase WholeMilk] \\
-                                                   \MyIndent [ALL :hasTopping Mango] \\
-                                                   \MyIndent [FILLS :hasCountryOfOrigin Italy]] \\
+            \textbf{Gelato} $\sqsubseteq$ [AND NamedIceCream [ALL :HasBase WholeMilk] \\
+                                                   \MyIndent [ALL :HasTopping Mango] \\
+                                                   \MyIndent [FILLS :HasCountryOfOrigin Italy]] \\
                                                    \tabularnewline
             
-            \textbf{Helado} $\sqsubseteq$ [AND NamedIceCream [ALL :hasBase Egg] \\
-                                                   \MyIndent [ALL :hasTopping Mango] \\
-                                                   \MyIndent [FILLS :hasCountryOfOrigin Argentina]] \\
+            \textbf{Helado} $\sqsubseteq$ [AND NamedIceCream [ALL :HasBase Egg] \\
+                                                   \MyIndent [ALL :HasTopping Mango] \\
+                                                   \MyIndent [FILLS :HasCountryOfOrigin Argentina]] \\
                                                    \tabularnewline
 
-            \textbf{Mochi} $\sqsubseteq$ [AND NamedIceCream [ALL :hasBase Egg] \\
-                                                  \MyIndent [ALL :hasTopping [ONE-OF BlackSesame Vanilla]] \\
-                                                  \MyIndent [FILLS :hasCountryOfOrigin China]] \\
+            \textbf{Mochi} $\sqsubseteq$ [AND NamedIceCream [ALL :HasBase Egg] \\
+                                                  \MyIndent [ALL :HasTopping [ONE-OF BlackSesame Vanilla]] \\
+                                                  \MyIndent [FILLS :HasCountryOfOrigin China]] \\
                                                   \tabularnewline
 
             \textbf{PopularIceCream} $\doteq$ [AND IceCream \\
-                                                  \MyIndent [ALL :hasTopping [ONE-OF Chocolate Coffee Mango Strawberry Vanilla]]] \\
+                                                  \MyIndent [ALL :HasTopping [ONE-OF Chocolate Coffee Mango Strawberry Vanilla]]] \\
                                                   \tabularnewline
 
             \textbf{Chinese} $\doteq$ [AND PopularIceCream \\
-                                                  \MyIndent [ALL :hasTopping [ONE-OF BlackSesame RedBean]] \\
-                                                  \MyIndent [FILLS :hasCountryOfOrigin China]] \\
+                                                  \MyIndent [ALL :HasTopping [ONE-OF BlackSesame RedBean]] \\
+                                                  \MyIndent [FILLS :HasCountryOfOrigin China]] \\
                                                   \tabularnewline
 
             
             \textbf{IceCreamBase} $\sqsubseteq$ Food \\
-            \textbf{Cream} $\sqsubseteq$ IceCreamBase \\
-            \textbf{Egg} $\sqsubseteq$ IceCreamBase \\
-            \textbf{Noodle} $\sqsubseteq$ IceCreamBase \\
-            \textbf{Salep} $\sqsubseteq$ IceCreamBase \\
-            \textbf{Sugar} $\sqsubseteq$ IceCreamBase \\
-            \textbf{Water} $\sqsubseteq$ IceCreamBase \\
-            \textbf{WholeMilk} $\sqsubseteq$ IceCreamBase \\ \tabularnewline
+                \textbf{Cream} $\sqsubseteq$ IceCreamBase \\
+                \textbf{Egg} $\sqsubseteq$ IceCreamBase \\
+                \textbf{Noodle} $\sqsubseteq$ IceCreamBase \\
+                \textbf{Salep} $\sqsubseteq$ IceCreamBase \\
+                \textbf{Sugar} $\sqsubseteq$ IceCreamBase \\
+                \textbf{Water} $\sqsubseteq$ IceCreamBase \\
+                \textbf{WholeMilk} $\sqsubseteq$ IceCreamBase \\ \tabularnewline
             
             \textbf{IceCreamTopping} $\sqsubseteq$ Food \\ \tabularnewline
             
             \textbf{BeanTopping} $\sqsubseteq$ IceCreamTopping \\
-            \textbf{Coffee} $\sqsubseteq$ [AND BeanTopping [ALL :hasSweetness None]] \\
-            \textbf{Mastic} $\sqsubseteq$ [AND BeanTopping [ALL :hasSweetness None]] \\
-            \textbf{MungBean} $\sqsubseteq$ [AND BeanTopping [ALL :hasSweetness None]] \\
-            \textbf{RedBean} $\sqsubseteq$ [AND BeanTopping [ALL :hasSweetness None]] \\ \tabularnewline
+                \textbf{Coffee} $\sqsubseteq$ [AND BeanTopping [ALL :HasSweetness None]] \\
+                \textbf{Mastic} $\sqsubseteq$ [AND BeanTopping [ALL :HasSweetness None]] \\
+                \textbf{MungBean} $\sqsubseteq$ [AND BeanTopping [ALL :HasSweetness None]] \\
+                \textbf{RedBean} $\sqsubseteq$ [AND BeanTopping [ALL :HasSweetness None]] \\ \tabularnewline
             
             \textbf{FruitTopping} $\sqsubseteq$ IceCreamTopping \\
-            \textbf{Apple} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
-            \textbf{Avocado} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
-            \textbf{Banana} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
-            \textbf{Durian} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
-            \textbf{Jackfruit} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
-            \textbf{Lemon} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
-            \textbf{Mango} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
-            \textbf{Strawberry} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\ \tabularnewline
-            
+                \textbf{Apple} $\sqsubseteq$ [AND FruitTopping [ALL :HasSweetness Medium]] \\
+                \textbf{Avocado} $\sqsubseteq$ [AND FruitTopping [ALL :HasSweetness Medium]] \\
+                \textbf{Banana} $\sqsubseteq$ [AND FruitTopping [ALL :HasSweetness Medium]] \\
+                \textbf{Durian} $\sqsubseteq$ [AND FruitTopping [ALL :HasSweetness Medium]] \\
+                \textbf{Jackfruit} $\sqsubseteq$ [AND FruitTopping [ALL :HasSweetness Medium]] \\
+                \textbf{Lemon} $\sqsubseteq$ [AND FruitTopping [ALL :HasSweetness Medium]] \\
+                \textbf{Mango} $\sqsubseteq$ [AND FruitTopping [ALL :HasSweetness Medium]] \\
+                \textbf{Strawberry} $\sqsubseteq$ [AND FruitTopping [ALL :HasSweetness Medium]] \\ \tabularnewline
             
             \textbf{HerbSpiceTopping} $\sqsubseteq$ IceCreamTopping \\
-            \textbf{BlackSesame} $\sqsubseteq$ [AND HerbSpiceTopping [ALL :hasSweetness None]] \\
-            \textbf{PandanusLeaves} $\sqsubseteq$ [AND HerbSpiceTopping [ALL :hasSweetness None]] \\
-            \textbf{Vanilla} $\sqsubseteq$ [AND HerbSpiceTopping [ALL :hasSweetness Low]] \\ \tabularnewline
+                \textbf{BlackSesame} $\sqsubseteq$ [AND HerbSpiceTopping [ALL :HasSweetness None]] \\
+                \textbf{PandanusLeaves} $\sqsubseteq$ [AND HerbSpiceTopping [ALL :HasSweetness None]] \\
+                \textbf{Vanilla} $\sqsubseteq$ [AND HerbSpiceTopping [ALL :HasSweetness Low]] \\ \tabularnewline
             
             \textbf{LiquidTopping} $\sqsubseteq$ IceCreamTopping \\            
-            \textbf{Chocolate} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness High]] \\
-            \textbf{CoconutMilk} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness Medium]] \\
-            \textbf{PalmSugar} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness High]] \\
-            \textbf{RoseWater} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness Medium]] \\
-            \textbf{SugarSyrup} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness High]] \\ \tabularnewline
+                \textbf{Chocolate} $\sqsubseteq$ [AND LiquidTopping [ALL :HasSweetness High]] \\
+                \textbf{CoconutMilk} $\sqsubseteq$ [AND LiquidTopping [ALL :HasSweetness Medium]] \\
+                \textbf{PalmSugar} $\sqsubseteq$ [AND LiquidTopping [ALL :HasSweetness High]] \\
+                \textbf{RoseWater} $\sqsubseteq$ [AND LiquidTopping [ALL :HasSweetness Medium]] \\
+                \textbf{SugarSyrup} $\sqsubseteq$ [AND LiquidTopping [ALL :HasSweetness High]] \\ \tabularnewline
             
             \textbf{NutTopping} $\sqsubseteq$ IceCreamTopping \\
-            \textbf{Pistachios} $\sqsubseteq$ [AND NutTopping [ALL :hasSweetness None]] \\ \tabularnewline
+                \textbf{Pistachios} $\sqsubseteq$ [AND NutTopping [ALL :HasSweetness None]] \\ \tabularnewline
             
             \textbf{HardToppings} $\doteq$ [AND IceCreamTopping \\
                                       \MyIndent [ONE-OF BeanTopping HerbSpiceTopping NutTopping]] \\
             \textbf{NaturalToppings} $\doteq$ [AND IceCreamTopping [NOT LiquidTopping]] \\
             \textbf{NonSweetToppings} $\doteq$ [AND IceCreamTopping [NOT SweetToppings]] \\
-            \textbf{SweetToppings} $\doteq$ [AND IceCreamTopping \\ \MyIndent [ALL :hasSweetness [ONE-OF High or Medium]]] \\\tabularnewline
+            \textbf{SweetToppings} $\doteq$ [AND IceCreamTopping \\ \MyIndent [ALL :HasSweetness [ONE-OF High or Medium]]] \\\tabularnewline
 
 
             \textbf{ValuePartition} $\sqsubseteq$ Thing \\ \tabularnewline
@@ -238,7 +238,7 @@
         \end{tabularx}
 
 
-    В горната таблица:
+    Уточнения за горната таблица:
 
         \begin{itemize} 
             \item{} [NOT $d_1$ $d_2$ \ldots $d_k$] описва тези индивиди, които не са представители на всички $d_i$
@@ -253,14 +253,32 @@
         \end{itemize}
     
     \subsection{Свойства}
+
+    Следващите таблици показват наличните свойства. Представени са както релации между индивидуални обекти (т.нар. \textit{Object properties}), така и релации между индивидуални обекти и данни от определени типове (т.нар. \textit{Data properties}).
     
-    \subsubsection{Свойства на обектите}
+        \subsubsection{Свойства на обектите}
     
-    TODO
+            \begin{table}[htbp]
+                \centering
+                \begin{tabularx}{\textwidth}{| X | X | X | X |}
+                    \hline
+                    \textbf{Домейн}          & \textbf{Свойство}     & \textbf{Рейндж}     & \textbf{Характерис- тика}         \\ \hline
+                            
+                    Food            & hasCountryOf Origin & Country         &           -                         \\ \hline
+                    Food            & hasIngredient      & Food             & \textit{transitive}                 \\ \hline
+                    Food            & hasBase            & IceCreamBase     &           -                         \\ \hline
+                    Food            & hasTopping         & IceCream Topping & \textit{inverse functional}         \\ \hline
+                    IceCreamTopping & hasSweetness       & Sweetness        & \textit{functional}                 \\ \hline
+                    Food            & isIngredientOf     & Food             & \textit{inverseOf} hasIngredient    \\ \hline
+                    IceCreamBase    & isBaseOf           & Food             & \textit{inverseOf} hasBase          \\ \hline
+                    IceCreamTopping & isToppingOf        & Food             & \textit{inverseOf} hasTopping       \\ \hline
+                            
+                \end{tabularx}
+            \end{table}
     
-    \subsubsection{Свойства на данните}
+        \subsubsection{Свойства на данните}
     
-    TODO
+            TODO
     
     
     
