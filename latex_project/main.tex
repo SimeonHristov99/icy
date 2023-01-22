@@ -120,73 +120,137 @@
         \midrule
         \endhead
 
-        \textbf{DomainThing} $\sqsubseteq$ Thing \\ \tabularnewline
+            \textbf{DomainThing} $\sqsubseteq$ Thing \\ \tabularnewline
         
             \textbf{Country} $\doteq$ [AND DomainThing \\
-            \MyIndent \{\{Argentina\} $\cup$ (Argentina, Australia, China, Greece, India, Indonesia, Italy, New\_Zeland, Philippines, Spain, Turkey, United\_Kingdom, United\_States, Iran)] 
-                      \\ \tabularnewline
-        	\textbf{Food} \\
-        		IceCream \\
-        			Argentinian \\
-        			Chinese \\
-        			Italian \\
-        			NamedIceCream \\
-        				Gelato \\
-        				Helado \\
-        				Mochi \\
-        			PopularIceCream \\
-        				Chinese \\
-        		IceCreamBase \\
-        			Cream \\
-        			Egg \\
-        			Noodle \\
-        			Salep \\
-        			Sugar \\
-        			Water \\
-        			WholeMilk \\
-        		IceCreamTopping \\
-        			BeanTopping \\
-        				Coffee \\
-        				Mastic \\
-        				MungBean \\
-        				RedBean \\
-        			FruitTopping \\
-        				Apple \\
-        				Avocado \\
-        				Banana \\
-        				Durian \\
-        				Jackfruit \\
-        				Lemon \\
-        				Mango \\
-        				Strawberry \\
-        			HardToppings \\
-        			HerbSpiceTopping \\
-        				BlackSesame \\
-        				PandanusLeaves \\
-        				Vanilla \\
-        			LiquidTopping \\
-        				Chocolate \\
-        				CoconutMilk \\
-        				PalmSugar \\
-        				RoseWater \\
-        				SugarSyrup \\
-        			NaturalToppings \\
-        			NonSweetToppings \\
-        			NutTopping \\
-        				Pistachios \\
-        			SweetToppings \\
-        ValuePartition \\
-        	Sweetness \\
-        		High \\
-        		Low \\
-        		Medium \\
-        		None \\
+                            \MyIndent [ONE-OF Argentina Australia China Greece India \\
+                                    \MyIndent Indonesia Italy New\_Zeland Philippines Spain Turkey \\
+                                    \MyIndent United\_Kingdom United\_States Iran] \\
+                            \tabularnewline
 
-        
+            \textbf{Food} $\sqsubseteq$ DomainThing \\ \tabularnewline
+
+
+            
+            \textbf{IceCream} $\sqsubseteq$ [AND Food \\
+                                      \MyIndent [EXISTS 1 :hasBase] \\
+                                      \MyIndent [EXISTS 1 :hasTopping] \\
+                                      \MyIndent [ALL :hasBase IceCreamBase]] \\
+                                      \tabularnewline
+           
+            \textbf{Argentinian} $\doteq$ [AND IceCream [ALL :hasBase [ONE-OF Egg Sugar WholeMilk]] \\
+                                              \MyIndent [ALL :hasTopping NaturalToppings] \\
+                                              \MyIndent [FILLS :hasCountryOfOrigin Argentina]] \\
+                                              \tabularnewline
+           
+            \textbf{Italian} $\doteq$ [AND IceCream [ALL :hasBase [ONE-OF Egg Sugar WholeMilk]] \\
+                                          \MyIndent [ALL :hasTopping NaturalToppings] \\
+                                          \MyIndent [FILLS :hasCountryOfOrigin Italy]] \\
+                                          \tabularnewline
+            
+            \textbf{NamedIceCream} $\sqsubseteq$ IceCream \\ \tabularnewline
+            
+            \textbf{Gelato} $\sqsubseteq$ [AND NamedIceCream [ALL :hasBase WholeMilk] \\
+                                                   \MyIndent [ALL :hasTopping Mango] \\
+                                                   \MyIndent [FILLS :hasCountryOfOrigin Italy]] \\
+                                                   \tabularnewline
+            
+            \textbf{Helado} $\sqsubseteq$ [AND NamedIceCream [ALL :hasBase Egg] \\
+                                                   \MyIndent [ALL :hasTopping Mango] \\
+                                                   \MyIndent [FILLS :hasCountryOfOrigin Argentina]] \\
+                                                   \tabularnewline
+
+            \textbf{Mochi} $\sqsubseteq$ [AND NamedIceCream [ALL :hasBase Egg] \\
+                                                  \MyIndent [ALL :hasTopping [ONE-OF BlackSesame Vanilla]] \\
+                                                  \MyIndent [FILLS :hasCountryOfOrigin China]] \\
+                                                  \tabularnewline
+
+            \textbf{PopularIceCream} $\doteq$ [AND IceCream \\
+                                                  \MyIndent [ALL :hasTopping [ONE-OF Chocolate Coffee Mango Strawberry Vanilla]]] \\
+                                                  \tabularnewline
+
+            \textbf{Chinese} $\doteq$ [AND PopularIceCream \\
+                                                  \MyIndent [ALL :hasTopping [ONE-OF BlackSesame RedBean]] \\
+                                                  \MyIndent [FILLS :hasCountryOfOrigin China]] \\
+                                                  \tabularnewline
+
+            
+            \textbf{IceCreamBase} $\sqsubseteq$ Food \\
+            \textbf{Cream} $\sqsubseteq$ IceCreamBase \\
+            \textbf{Egg} $\sqsubseteq$ IceCreamBase \\
+            \textbf{Noodle} $\sqsubseteq$ IceCreamBase \\
+            \textbf{Salep} $\sqsubseteq$ IceCreamBase \\
+            \textbf{Sugar} $\sqsubseteq$ IceCreamBase \\
+            \textbf{Water} $\sqsubseteq$ IceCreamBase \\
+            \textbf{WholeMilk} $\sqsubseteq$ IceCreamBase \\ \tabularnewline
+            
+            \textbf{IceCreamTopping} $\sqsubseteq$ Food \\ \tabularnewline
+            
+            \textbf{BeanTopping} $\sqsubseteq$ IceCreamTopping \\
+            \textbf{Coffee} $\sqsubseteq$ [AND BeanTopping [ALL :hasSweetness None]] \\
+            \textbf{Mastic} $\sqsubseteq$ [AND BeanTopping [ALL :hasSweetness None]] \\
+            \textbf{MungBean} $\sqsubseteq$ [AND BeanTopping [ALL :hasSweetness None]] \\
+            \textbf{RedBean} $\sqsubseteq$ [AND BeanTopping [ALL :hasSweetness None]] \\ \tabularnewline
+            
+            \textbf{FruitTopping} $\sqsubseteq$ IceCreamTopping \\
+            \textbf{Apple} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
+            \textbf{Avocado} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
+            \textbf{Banana} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
+            \textbf{Durian} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
+            \textbf{Jackfruit} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
+            \textbf{Lemon} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
+            \textbf{Mango} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\
+            \textbf{Strawberry} $\sqsubseteq$ [AND FruitTopping [ALL :hasSweetness Medium]] \\ \tabularnewline
+            
+            
+            \textbf{HerbSpiceTopping} $\sqsubseteq$ IceCreamTopping \\
+            \textbf{BlackSesame} $\sqsubseteq$ [AND HerbSpiceTopping [ALL :hasSweetness None]] \\
+            \textbf{PandanusLeaves} $\sqsubseteq$ [AND HerbSpiceTopping [ALL :hasSweetness None]] \\
+            \textbf{Vanilla} $\sqsubseteq$ [AND HerbSpiceTopping [ALL :hasSweetness Low]] \\ \tabularnewline
+            
+            \textbf{LiquidTopping} $\sqsubseteq$ IceCreamTopping \\            
+            \textbf{Chocolate} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness High]] \\
+            \textbf{CoconutMilk} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness Medium]] \\
+            \textbf{PalmSugar} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness High]] \\
+            \textbf{RoseWater} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness Medium]] \\
+            \textbf{SugarSyrup} $\sqsubseteq$ [AND LiquidTopping [ALL :hasSweetness High]] \\ \tabularnewline
+            
+            \textbf{NutTopping} $\sqsubseteq$ IceCreamTopping \\
+            \textbf{Pistachios} $\sqsubseteq$ [AND NutTopping [ALL :hasSweetness None]] \\ \tabularnewline
+            
+            \textbf{HardToppings} $\doteq$ [AND IceCreamTopping \\
+                                      \MyIndent [ONE-OF BeanTopping HerbSpiceTopping NutTopping]] \\
+            \textbf{NaturalToppings} $\doteq$ [AND IceCreamTopping [NOT LiquidTopping]] \\
+            \textbf{NonSweetToppings} $\doteq$ [AND IceCreamTopping [NOT SweetToppings]] \\
+            \textbf{SweetToppings} $\doteq$ [AND IceCreamTopping \\ \MyIndent [ALL :hasSweetness [ONE-OF High or Medium]]] \\\tabularnewline
+
+
+            \textbf{ValuePartition} $\sqsubseteq$ Thing \\ \tabularnewline
+            
+            \textbf{Sweetness} $\doteq$ [AND ValuePartition [ONE-OF High Medium Low None]] \\            
+            \textbf{High} $\sqsubseteq$ Sweetness \\
+            \textbf{Low} $\sqsubseteq$ Sweetness \\
+            \textbf{Medium} $\sqsubseteq$ Sweetness \\
+            \textbf{None} $\sqsubseteq$ Sweetness \\
+            \tabularnewline
+
         \bottomrule
         \end{tabularx}
 
 
+    В горната таблица:
+
+        \begin{itemize} 
+            \item{} [NOT $d_1$ $d_2$ \ldots $d_k$] описва тези индивиди, които не са представители на всички $d_i$
+            \item{} \textit{I}[[AND DomainThing ValuePartition]] = $\emptyset$
+            \item{} \textit{I}[[AND IceCream IceCreamTopping IceCreamBase]] = $\emptyset$
+            \item{} \textit{I}[[AND BeanTopping NutTopping FruitTopping LiquidTopping HerbSpiceTopping]] = $\emptyset$
+            \item{} \textit{I}[[AND Cream Egg Noodle WholeMilk Salep Sugar Water]] = $\emptyset$
+            \item{} \textit{I}[[AND Coffee RedBean Mastic MungBean]] = $\emptyset$
+            \item{} \textit{I}[[AND Avocado Lemon Durian Strawberry Mango Banana Jackfruit Apple]] = $\emptyset$
+            \item{} \textit{I}[[AND Vanilla BlackSesame PandanusLeaves]] = $\emptyset$
+            \item{} \textit{I}[[AND SugarSyrup CoconutMilk RoseWater Chocolate PalmSugar]] = $\emptyset$
+        \end{itemize}
     
     \subsection{Свойства}
     
