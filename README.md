@@ -6,15 +6,15 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 
 ## Requirements
 
-- [ ] At least 15 concepts (classes):
-  - [ ] Atomic concepts;
-  - [ ] Composed concepts (by EXISTS, FILLS, ALL, AND).
-- [ ] At least 15 individuals (instances).
+- [X] At least 15 concepts (classes):
+  - [X] Atomic concepts;
+  - [X] Composed concepts (by EXISTS, FILLS, ALL, AND).
 - [ ] At least 10 properties with suitable domain and range.
   - [X] Functional;
   - [X] Transitive;
-  - [X] Inverse.
+  - [X] Inverse;
   - [ ] Make them 10.
+- [ ] At least 15 individuals (instances).
 - [ ] Examples of reasoning over the knowledge base:
   - [ ] KB |= (c → e)  - at least 1;
   - [ ] KB |= (c ⊑ d) - at least 1;
@@ -25,7 +25,9 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] Write down the requirements.
 - [X] Write a pitch (pdf file).
 - [X] Add first version of documentation.
-- [ ] Add table with classes.
+- [X] Add table with classes.
+- [X] Add table with object properties.
+- [ ] Add table with data properties.
 
 ## Resources
 
