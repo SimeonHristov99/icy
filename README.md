@@ -28,7 +28,9 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] Add table with classes.
 - [X] Add table with object properties.
 - [X] Add table with data properties.
-- [ ] Fix problem with `isTraditional` data property.
+- [X] Fix problem with `isTraditional` data property.
+- [X] Update concept table.
+- [ ] Make 10 more individuals (ice creams).
 
 ## Resources
 
