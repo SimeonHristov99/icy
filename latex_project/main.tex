@@ -113,8 +113,6 @@
         
         Следващата таблица показва различните концепти в icy, използвайки синтаксиса на \textit{DL}.
 
-        Symbols: $\doteq$, $\leq$, $\sqsubseteq$
-
         \begin{tabularx}{1\textwidth}{@{}X@{}}
         \toprule
         \textbf{Концепти} \\
@@ -166,10 +164,29 @@
                                                   \MyIndent [FILLS :HasCountryOfOrigin China]] \\
                                                   \tabularnewline
 
+            \textbf{Magnum} $\sqsubseteq$ [AND NamedIceCream [ALL :HasBase Cream] \\
+                                                   \MyIndent [ALL :HasBase Sugar] \\
+                                                   \MyIndent [ALL :HasBase Water] \\
+                                                   \MyIndent [ALL :HasTopping Chocolate] \\
+                                                   \MyIndent [FILLS :HasCountryOfOrigin United\_States]] \\
+                                                   \tabularnewline
+
             \textbf{PopularIceCream} $\doteq$ [AND IceCream \\
                                                   \MyIndent [ALL :HasTopping [ONE-OF Chocolate Coffee Mango Strawberry Vanilla]]] \\
                                                   \tabularnewline
-
+            
+            \textbf{HighCalorieIceCream} $\doteq$ [AND IceCream \\
+                                             \MyIndent \MyIndent [ALL :HasCalorificContentValue >=150]] \\
+            \textbf{LowCalorieIceCream} $\doteq$ [AND IceCream \\
+                                             \MyIndent \MyIndent [ALL :HasCalorificContentValue <150]] \\
+                                             \tabularnewline
+                                             
+            \textbf{NonTraditionalIceCream} $\doteq$ [AND IceCream \\
+                                             \MyIndent \MyIndent [ALL :IsTraditional false]] \\
+            \textbf{TraditionalIceCream} $\doteq$ [AND IceCream \\
+                                             \MyIndent \MyIndent [ALL :IsTraditional true]] \\
+                                             \tabularnewline
+            
             \textbf{Chinese} $\doteq$ [AND PopularIceCream \\
                                                   \MyIndent [ALL :HasTopping [ONE-OF BlackSesame RedBean]] \\
                                                   \MyIndent [FILLS :HasCountryOfOrigin China]] \\
