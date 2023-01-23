@@ -818,6 +818,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#NonTraditionalIceCream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#NonTraditionalIceCream">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isTraditional"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#None -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#None">
@@ -1031,13 +1049,17 @@
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#TraditionalIceCream -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#TraditionalIceCream">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isTraditional"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#isTraditional"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
