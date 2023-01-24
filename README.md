@@ -15,7 +15,7 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
   - [X] Inverse;
   - [X] Make them 10.
 - [X] At least 15 individuals (instances).
-- [ ] Examples of reasoning over the knowledge base:
+- [X] Examples of reasoning over the knowledge base:
   - [X] KB |= (c → e)  - at least 1;
   - [X] KB |= (c ⊑ d) - at least 1;
   - [X] Classification - at least 1.
@@ -37,7 +37,7 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] Create the table with the individuals.
 - [X] Give examples of reasoning: individual is class (KB |= (c → e)).
 - [X] Give examples of reasoning: class is subclass of class (KB |= (c ⊑ d)).
-- [ ] Give examples of reasoning: classification.
+- [X] Give examples of reasoning: classification.
 - [ ] DL query.
 - [ ] SPARQL query.
 - [ ] Visualize.
