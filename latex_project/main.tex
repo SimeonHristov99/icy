@@ -497,29 +497,53 @@ KB |= (Mochi $\sqsubseteq$ Chinese)
 \begin{figure}
 \centering
     \includegraphics[scale=0.7]{./images/hierarchy.png}
-  \caption{Подйерархия, в която ще бъде включен новият атомарен концепт \textbf{VeryHighCalorieIceCream}}
+  \caption{Подйерархия, в която ще бъде включен новият атомарен концепт \textbf{VeryHighCalorieIceCream}.}
   \label{fig:hierarchy}
 \end{figure}
 
 \section{Заявки към базата от знание}
 
-\subsection{DL заявки}
+    \subsection{DL заявка}
 
-TODO
+        Заявка, която извлича всички традиционни сладоледи, които са с калоричност поне 300, е показана на \hyperref[fig:dl1]{Фигура~\ref*{fig:dl1}}.
+        
+        \begin{figure}
+        \centering
+            \includegraphics[scale=0.7]{./images/dl1.png}
+            \caption{Всички традиционни сладоледи, които са с калоричност поне 300.}
+            \label{fig:dl1}
+        \end{figure}
+        
+    \subsection{SPARQL заявка}
 
-\subsection{SPARQL заявки}
+        Заявка, която извежда дали най-нискокалоричният сладолед е традиционен заедно с неговото име и калории, е показана на \hyperref[fig:sparql1]{Фигура~\ref*{fig:sparql1}}. За по-добра четимост заявката е поставена тук: \\
 
-TODO
-
-
-
-
-
-
+        SELECT DISTINCT ?isTr ?minCals ?s \\
+        WHERE $\{$ \\
+            \MyIndent $\{$ SELECT (min(?cals) as ?minCals) \\
+        	\MyIndent WHERE { ?s icy:hasCalorificContentValue  ?cals} $\}$ \\
+        	\MyIndent ?s icy:isTraditional ?isTr . \\
+        	\MyIndent ?s icy:hasCalorificContentValue  ?minCals. \\
+        $\}$
+        
+        \begin{figure}
+        \centering
+            \includegraphics[scale=0.3]{./images/sparql1.png}
+            \caption{Името, калориите и булевата стойност за полето "Традиционен" за най-нискокалоричния сладолед.}
+            \label{fig:sparql1}
+        \end{figure}
+        
 
 \section{Схема на онтологията}
 
-TODO
+Онтологията е визуализирана на \hyperref[fig:viz1]{Фигура~\ref*{fig:viz1}}. По-подробна схема е поставена във файла \textit{ontology.csv}.
+
+        \begin{figure}
+        \centering
+            \includegraphics[scale=0.5]{./images/viz1.png}
+            \caption{Схема на онтологията.}
+            \label{fig:viz1}
+        \end{figure}
 
 
 
@@ -532,10 +556,7 @@ TODO
 
 \section{Използвани технологии}
 
-TODO
-
-
-
+За визуализация на онтологията е използвана услугата, предоставена от \href{http://vowl.visualdataweb.org/webvowl-old/webvowl-old.html}.
 
 
 %%%%%%%%%%%%%%%%% END OF MAIN TEXT %%%%%%%%%%%%%%%%
