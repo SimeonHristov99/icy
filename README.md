@@ -16,9 +16,9 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
   - [X] Make them 10.
 - [X] At least 15 individuals (instances).
 - [ ] Examples of reasoning over the knowledge base:
-  - [ ] KB |= (c → e)  - at least 1;
-  - [ ] KB |= (c ⊑ d) - at least 1;
-  - [ ] Classification - at least 1.
+  - [X] KB |= (c → e)  - at least 1;
+  - [X] KB |= (c ⊑ d) - at least 1;
+  - [X] Classification - at least 1.
 
 ## Plan of Attack
 
@@ -35,7 +35,13 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] Assign proper values for their properties.
 - [X] Update the concept table.
 - [X] Create the table with the individuals.
-- [ ] Give examples of reasoning.
+- [X] Give examples of reasoning: individual is class (KB |= (c → e)).
+- [X] Give examples of reasoning: class is subclass of class (KB |= (c ⊑ d)).
+- [ ] Give examples of reasoning: classification.
+- [ ] DL query.
+- [ ] SPARQL query.
+- [ ] Visualize.
+- [ ] Future improvements.
 
 ## Resources
 

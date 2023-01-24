@@ -449,12 +449,43 @@
 
 \section{Примери за извършване на логически извод}
 
+\subsection{Пример 1}
 
+KB |= (ExampleMagnum $\rightarrow$ HighCalorieIceCream)
 
+\vspace{1em}
 
+\textbf{ExampleMagnum} \textit{Type} \textbf{Magnum} \\
+\MyIndent \textbf{Magnum} \textit{SubClassOf} \textbf{NamedIceCream} \\
+\MyIndent \MyIndent \textbf{NamedIceCream} \textit{SubClassOf} \textbf{IceCream} \\
+\textbf{ExampleMagnum} \textit{hasCalorificContentValue} $200$ \\
+\textbf{IceCream} and (\textit{hasCalorificContentValue} >= $150$) \textit{SubClassOf} \textbf{HighCalorieIceCream}
 
+\subsection{Пример 2}
 
+KB |= (ExampleHaloHalo $\rightarrow$ NonTraditionalIceCream)
 
+\vspace{1em}
+
+\textbf{ExampleHaloHalo} \textit{Type} \textbf{HaloHalo} \\
+\MyIndent \textbf{HaloHalo} \textit{SubClassOf} \textbf{NamedIceCream} \\
+\MyIndent \MyIndent \textbf{NamedIceCream} \textit{SubClassOf} \textbf{IceCream} \\
+\textbf{ExampleHaloHalo} \textit{isTraditional} $false$ \\
+\textbf{IceCream} and (\textit{isTraditional} value $false$) \textit{SubClassOf} \textbf{NonTraditionalIceCream}
+
+\subsection{Пример 3}
+
+KB |= (Mochi $\sqsubseteq$ Chinese)
+
+\vspace{1em}
+
+\textbf{Mochi} \textit{SubClassOf} \textbf{NamedIceCream} \\
+\MyIndent \textbf{NamedIceCream} \textit{SubClassOf} \textbf{IceCream} \\
+\textbf{Mochi} \textit{SubClassOf} hasTopping some \textbf{BlackSesame} \\
+\textbf{Mochi} \textit{SubClassOf} hasTopping some \textbf{Vanilla} \\
+\textbf{Mochi} \textit{SubClassOf} hasCountryOfOrigin value \textbf{China} \\
+\textbf{PopularIceCream} \textit{EquivalentTo} \textbf{IceCream} and (hasTopping some (Chocolate or Coffee or Mango or Strawberry or Vanilla)) \\
+\textbf{Chinese} \textit{EquivalentTo} \textbf{PopularIceCream} and (hasTopping some (BlackSesame or RedBean)) and (hasCountryOfOrigin value China)
 
 \section{Извършване на класификация}
 
