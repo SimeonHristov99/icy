@@ -41,7 +41,7 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] DL query.
 - [X] SPARQL query.
 - [X] Visualize.
-- [ ] Future improvements.
+- [X] Future improvements.
 
 ## Resources
 
