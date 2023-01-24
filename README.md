@@ -14,7 +14,7 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
   - [X] Transitive;
   - [X] Inverse;
   - [X] Make them 10.
-- [ ] At least 15 individuals (instances).
+- [X] At least 15 individuals (instances).
 - [ ] Examples of reasoning over the knowledge base:
   - [ ] KB |= (c → e)  - at least 1;
   - [ ] KB |= (c ⊑ d) - at least 1;
@@ -30,7 +30,12 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] Add table with data properties.
 - [X] Fix problem with `isTraditional` data property.
 - [X] Update concept table.
-- [ ] Make 10 more individuals (ice creams).
+- [X] Make 10 more named ice creams.
+- [X] Make 10 individuals based in the new named ice creams.
+- [X] Assign proper values for their properties.
+- [X] Update the concept table.
+- [ ] Create the table with the individuals.
+- [ ] Give examples of reasoning.
 
 ## Resources
 

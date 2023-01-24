@@ -137,17 +137,64 @@
                                       \MyIndent [ALL :HasBase IceCreamBase]] \\
                                       \tabularnewline
            
-            \textbf{Argentinian} $\doteq$ [AND IceCream [ALL :HasBase [ONE-OF Egg Sugar WholeMilk]] \\
+            \textbf{Argentinian} $\doteq$ [AND IceCream \\
+                                            \MyIndent [ALL :HasBase [SOME-FROM Egg Sugar WholeMilk]] \\
                                               \MyIndent [ALL :HasTopping NaturalToppings] \\
                                               \MyIndent [FILLS :HasCountryOfOrigin Argentina]] \\
                                               \tabularnewline
            
-            \textbf{Italian} $\doteq$ [AND IceCream [ALL :HasBase [ONE-OF Egg Sugar WholeMilk]] \\
+            \textbf{Italian} $\doteq$ [AND IceCream \\
+                                          \MyIndent [ALL :HasBase [SOME-FROM Egg Sugar WholeMilk]] \\
                                           \MyIndent [ALL :HasTopping NaturalToppings] \\
                                           \MyIndent [FILLS :HasCountryOfOrigin Italy]] \\
                                           \tabularnewline
             
             \textbf{NamedIceCream} $\sqsubseteq$ IceCream \\ \tabularnewline
+
+            \textbf{BastaniSonnati} $\sqsubseteq$ [AND NamedIceCream \\
+                                                        \MyIndent [ALL :HasBase [SOME-FROM Cream Sugar]] \\
+                                                        \MyIndent [ALL :HasTopping [SOME-FROM NutTopping RoseWater]] \\
+                                                        \MyIndent [FILLS :HasCountryOfOrigin Iran]] \\
+        	\textbf{ClottedCreamIceCream} $\sqsubseteq$ [AND NamedIceCream \\
+                                                    \MyIndent [ALL :HasBase [SOME-FROM Cream Egg Sugar WholeMilk]] \\
+                                                    \MyIndent [FILLS :HasCountryOfOrigin United\_Kingdom]] \\
+        	\textbf{Dondurma} $\sqsubseteq$ [AND NamedIceCream \\
+                                                    \MyIndent [ALL :HasBase [SOME-OF Sugar WholeMilk]] \\
+                                                    \MyIndent [ALL :HasTopping [SOME-OF Pistachios Salep Vanilla]] \\
+                                                    \MyIndent [FILLS :HasCountryOfOrigin Turkey]] \\
+        	\textbf{Erdbeereis} $\sqsubseteq$ [AND NamedIceCream \\
+                                                    \MyIndent [ALL :HasBase Cream] \\
+                                                    \MyIndent [ALL :HasTopping [SOME-OF Chocolate Pistachios Vanilla]] \\
+                                                    \MyIndent [FILLS :HasCountryOfOrigin Australia]] \\
+        	\textbf{EsKrim} $\sqsubseteq$ [AND NamedIceCream \\
+                                                    \MyIndent [ALL :HasBase [SOME-OF Sugar]] \\
+                                                    \MyIndent [ALL :HasTopping [SOME-OF Avocado CoconutMilk Durian PandanusLeaves]] \\
+                                                    \MyIndent [FILLS :HasCountryOfOrigin Indonesia]] \\
+        	\textbf{GlykoKaimaki} $\sqsubseteq$ [AND NamedIceCream \\
+                                                    \MyIndent [ALL :HasBase [SOME-OF Cream Salep Sugar WholeMilk]] \\
+                                                    \MyIndent [ALL :HasTopping [SOME-OF Mastic]] \\
+                                                    \MyIndent [FILLS :HasCountryOfOrigin Greece]] \\
+        	\textbf{HaloHalo} $\sqsubseteq$ [AND NamedIceCream \\
+                                                    \MyIndent [ALL :HasBase WholeMilk] \\
+                                                    \MyIndent [ALL :HasTopping FruitTopping] \\
+                                                    \MyIndent [FILLS :HasCountryOfOrigin Philippines]] \\
+        	\textbf{HeladoDeTurron} $\sqsubseteq$ [AND NamedIceCream \\
+                                                    \MyIndent [ALL :HasBase [SOME-OF Cream Egg Sugar]] \\
+                                                    \MyIndent [FILLS :HasCountryOfOrigin Spain]] \\
+        	\textbf{Kulfi} $\sqsubseteq$ [AND NamedIceCream \\
+                                                    \MyIndent [ALL :HasBase [SOME-OF Cream WholeMilk]] \\
+                                                    \MyIndent [ALL :HasTopping Pistachios] \\
+                                                    \MyIndent [FILLS :HasCountryOfOrigin India]] \\
+        	\textbf{VanillaIceCream} $\sqsubseteq$ [AND NamedIceCream \\
+                                                    \MyIndent [ALL :HasBase [SOME-OF Cream Sugar]] \\
+                                                    \MyIndent [ALL :HasTopping Vanilla] \\
+                                                    \MyIndent [FILLS :HasCountryOfOrigin Spain]] \\
+                                                    \tabularnewline
+
+            \textbf{Gelato} $\sqsubseteq$ [AND NamedIceCream [ALL :HasBase WholeMilk] \\
+                                                   \MyIndent [ALL :HasTopping Mango] \\
+                                                   \MyIndent [FILLS :HasCountryOfOrigin Italy]] \\
+                                                   \tabularnewline
             
             \textbf{Gelato} $\sqsubseteq$ [AND NamedIceCream [ALL :HasBase WholeMilk] \\
                                                    \MyIndent [ALL :HasTopping Mango] \\
@@ -160,7 +207,7 @@
                                                    \tabularnewline
 
             \textbf{Mochi} $\sqsubseteq$ [AND NamedIceCream [ALL :HasBase Egg] \\
-                                                  \MyIndent [ALL :HasTopping [ONE-OF BlackSesame Vanilla]] \\
+                                                  \MyIndent [ALL :HasTopping [SOME-FROM BlackSesame Vanilla]] \\
                                                   \MyIndent [FILLS :HasCountryOfOrigin China]] \\
                                                   \tabularnewline
 
@@ -172,7 +219,7 @@
                                                    \tabularnewline
 
             \textbf{PopularIceCream} $\doteq$ [AND IceCream \\
-                                                  \MyIndent [ALL :HasTopping [ONE-OF Chocolate Coffee Mango Strawberry Vanilla]]] \\
+                                                  \MyIndent [ALL :HasTopping [SOME-FROM Chocolate Coffee Mango Strawberry Vanilla]]] \\
                                                   \tabularnewline
             
             \textbf{HighCalorieIceCream} $\doteq$ [AND IceCream \\
@@ -188,7 +235,7 @@
                                              \tabularnewline
             
             \textbf{Chinese} $\doteq$ [AND PopularIceCream \\
-                                                  \MyIndent [ALL :HasTopping [ONE-OF BlackSesame RedBean]] \\
+                                                  \MyIndent [ALL :HasTopping [SOME-FROM BlackSesame RedBean]] \\
                                                   \MyIndent [FILLS :HasCountryOfOrigin China]] \\
                                                   \tabularnewline
 
@@ -236,15 +283,15 @@
                 \textbf{Pistachios} $\sqsubseteq$ [AND NutTopping [ALL :HasSweetness None]] \\ \tabularnewline
             
             \textbf{HardToppings} $\doteq$ [AND IceCreamTopping \\
-                                      \MyIndent [ONE-OF BeanTopping HerbSpiceTopping NutTopping]] \\
+                                      \MyIndent [SOME-FROM BeanTopping HerbSpiceTopping NutTopping]] \\
             \textbf{NaturalToppings} $\doteq$ [AND IceCreamTopping [NOT LiquidTopping]] \\
             \textbf{NonSweetToppings} $\doteq$ [AND IceCreamTopping [NOT SweetToppings]] \\
-            \textbf{SweetToppings} $\doteq$ [AND IceCreamTopping \\ \MyIndent [ALL :HasSweetness [ONE-OF High or Medium]]] \\\tabularnewline
+            \textbf{SweetToppings} $\doteq$ [AND IceCreamTopping \\ \MyIndent [ALL :HasSweetness [SOME-FROM High Medium]]] \\\tabularnewline
 
 
             \textbf{ValuePartition} $\sqsubseteq$ Thing \\ \tabularnewline
             
-            \textbf{Sweetness} $\doteq$ [AND ValuePartition [ONE-OF High Medium Low None]] \\            
+            \textbf{Sweetness} $\doteq$ [AND ValuePartition [SOME-FROM High Medium Low None]] \\            
             \textbf{High} $\sqsubseteq$ Sweetness \\
             \textbf{Low} $\sqsubseteq$ Sweetness \\
             \textbf{Medium} $\sqsubseteq$ Sweetness \\
@@ -259,6 +306,7 @@
 
         \begin{itemize} 
             \item{} [NOT $d_1$ $d_2$ \ldots $d_k$] описва тези индивиди, които не са представители на всички $d_i$;
+            \item{} [SOME-OF $d_1$ $d_2$ \ldots $d_k$] описва тези индивиди, които са представители на някои $d_i$, с възможност за припокриване. Това е аналогът на ограничението \textit{someValuesFrom}, използвано в OWL;
             \item{} \textit{I}[[AND DomainThing ValuePartition]] = $\emptyset$;
             \item{} \textit{I}[[AND IceCream IceCreamTopping IceCreamBase]] = $\emptyset$;
             \item{} \textit{I}[[AND BeanTopping NutTopping FruitTopping LiquidTopping HerbSpiceTopping]] = $\emptyset$;

@@ -213,6 +213,46 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#BastaniSonnati -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#BastaniSonnati">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#NutTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#RoseWater"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Iran"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#BeanTopping">
@@ -272,6 +312,35 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#High"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ClottedCreamIceCream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ClottedCreamIceCream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Egg"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#United_Kingdom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -355,6 +424,47 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Dondurma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Dondurma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Pistachios"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Salep"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Vanilla"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Turkey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Durian -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Durian">
@@ -373,6 +483,79 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Egg">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Erdbeereis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Erdbeereis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Chocolate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Pistachios"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Vanilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Australia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#EsKrim -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#EsKrim">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Avocado"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#CoconutMilk"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Durian"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#PandanusLeaves"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Indonesia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -413,6 +596,67 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
                 <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Italy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#GlykoKaimaki -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#GlykoKaimaki">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Salep"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Mastic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Greece"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#HaloHalo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#HaloHalo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#FruitTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Philippines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -460,6 +704,34 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
                 <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Argentina"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#HeladoDeTurron -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#HeladoDeTurron">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Egg"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Spain"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -599,6 +871,39 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasSweetness"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Kulfi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Kulfi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Pistachios"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#India"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -985,6 +1290,32 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#IceCreamBase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#WholeMilk"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Vanilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Italy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1086,6 +1417,39 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#VanillaIceCream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#VanillaIceCream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#NamedIceCream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasBase"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Cream"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Sugar"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Vanilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Spain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Water -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Water">
@@ -1137,6 +1501,56 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ClottedCreamIceCream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ClottedCreamIceCream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#ClottedCreamIceCream"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleBastaniSonnati -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleBastaniSonnati">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#BastaniSonnati"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">159</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleDondurma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleDondurma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Dondurma"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">149</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleErdbeereis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleErdbeereis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Erdbeereis"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleEsKrim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleEsKrim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#EsKrim"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleGelato -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleGelato">
@@ -1147,11 +1561,31 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHaloHalo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHaloHalo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#HaloHalo"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHelado -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHelado">
         <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Helado"/>
         <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">159</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleKulfi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleKulfi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Kulfi"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</icy:hasCalorificContentValue>
         <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
     </owl:NamedIndividual>
     
@@ -1177,10 +1611,40 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleVanillaIceCream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleVanillaIceCream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#VanillaIceCream"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#GlykoKaimaki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#GlykoKaimaki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#GlykoKaimaki"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Greece -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Greece">
         <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#HeladoDeTurron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#HeladoDeTurron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#HeladoDeTurron"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">169</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
     </owl:NamedIndividual>
     
 
