@@ -1501,21 +1501,21 @@
     
 
 
-    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ClottedCreamIceCream -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ClottedCreamIceCream">
-        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#ClottedCreamIceCream"/>
-        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</icy:hasCalorificContentValue>
-        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleBastaniSonnati -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleBastaniSonnati">
         <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#BastaniSonnati"/>
         <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">159</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleClottedCreamIceCream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleClottedCreamIceCream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#ClottedCreamIceCream"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</icy:hasCalorificContentValue>
         <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
     </owl:NamedIndividual>
     
@@ -1561,6 +1561,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleGlykoKaimaki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleGlykoKaimaki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#GlykoKaimaki"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHaloHalo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHaloHalo">
@@ -1576,6 +1586,16 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHelado">
         <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Helado"/>
         <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">159</icy:hasCalorificContentValue>
+        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHeladoDeTurron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#ExampleHeladoDeTurron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#HeladoDeTurron"/>
+        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">169</icy:hasCalorificContentValue>
         <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
     </owl:NamedIndividual>
     
@@ -1621,30 +1641,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#GlykoKaimaki -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#GlykoKaimaki">
-        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#GlykoKaimaki"/>
-        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</icy:hasCalorificContentValue>
-        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#Greece -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#Greece">
         <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#Country"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/fmi_krr/ontologies/icy#HeladoDeTurron -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fmi_krr/ontologies/icy#HeladoDeTurron">
-        <rdf:type rdf:resource="http://www.semanticweb.org/fmi_krr/ontologies/icy#HeladoDeTurron"/>
-        <icy:hasCalorificContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">169</icy:hasCalorificContentValue>
-        <icy:isTraditional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</icy:isTraditional>
     </owl:NamedIndividual>
     
 

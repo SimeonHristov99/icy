@@ -34,7 +34,7 @@ This project was made when taking the coarse "Knowledge Representation and Reaso
 - [X] Make 10 individuals based in the new named ice creams.
 - [X] Assign proper values for their properties.
 - [X] Update the concept table.
-- [ ] Create the table with the individuals.
+- [X] Create the table with the individuals.
 - [ ] Give examples of reasoning.
 
 ## Resources
